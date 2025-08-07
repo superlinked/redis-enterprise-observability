@@ -1,68 +1,72 @@
 variable "gcp_project" {
-  type      = string
-  description = "The GCP project ID"
+  type        = string
+  description = "The GCP project ID for infrastructure resources"
 }
 
-variable "dns-zone-name" {
-  type      = string
-  sensitive = true
-  description = "The DNS Zone to deploy the app to"
+variable "domains_project" {
+  type        = string
+  description = "The GCP project ID where domains/DNS zones are managed"
 }
 
-variable "zone_dns_name" {
-  type      = string
-  sensitive = true
-  description = "The DNS zone name to deploy the app to"
+variable "dns_zone_name" {
+  type        = string
+  sensitive   = true
+  description = "The managed DNS zone name in Cloud DNS"
+}
 
+variable "domain_name" {
+  type        = string
+  sensitive   = true
+  description = "The domain name (e.g., example.com)"
 }
 
 variable "redis_cloud_account_key" {
-  type      = string
-  sensitive = true
+  type        = string
+  sensitive   = true
   description = "The Redis Cloud account key"
 }
 
 variable "redis_cloud_api_key" {
-  type      = string
-  sensitive = true
+  type        = string
+  sensitive   = true
   description = "The Redis Cloud API key"
 }
 
 variable "db_name" {
-    type      = string
-    description = "The name of the database"
+  type        = string
+  description = "The name of the database"
 }
 
 variable "gcloud_username" {
-    type      = string
-    description = "The GCP username"
+  type        = string
+  description = "The GCP username"
 }
 
 variable "gcloud_region" {
-    type      = string
-    description = "The GCP region"
+  type        = string
+  description = "The GCP region"
 }
 
 variable "gcloud_zone" {
-    type      = string
-    description = "The GCP zone"
+  type        = string
+  description = "The GCP zone"
 }
 
 variable "ssh_key_file" {
-    type      = string
-    description = "The path to the SSH key file"
+  type        = string
+  description = "The path to the SSH key file"
 }
 
 variable "subscription_id" {
-    type      = string
-    description = "The Redis Cloud subscription ID"
+  type        = string
+  description = "The Redis Cloud subscription ID"
 }
 
 
 
 variable "subdomain" {
-    type      = string
-    description = "The subdomain"
+  type        = string
+  description = "The subdomain"
 }
 
 # Optional existing VPC ID - if provided, will use existing VPC instead of creating new one
